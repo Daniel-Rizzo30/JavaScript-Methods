@@ -68,8 +68,21 @@ Array.prototype.myReduce = function(callbackFn) {
 };
 
 // INCLUDES //
-Array.prototype.myIncludes = function() {
-
+Array.prototype.myIncludes = function(searchElement, fromIndex = 0) {
+    let includes_flag = false; // Set flag for searching
+    if (fromIndex < 0) {
+        // For searching from the back of the array
+        // So -1 means searching just the last element
+        // -2 ... the last 2 elements ... so on
+        fromIndex = this.length + fromIndex; 
+    }
+    for (let i = fromIndex; i < this.length; i++) {
+        if (this[i] === searchElement) {
+            includes_flag = true;
+            break; // Condition satisfied, skip the rest
+        }
+    }
+    return includes_flag;
 };
 
 // INDEXOF //
