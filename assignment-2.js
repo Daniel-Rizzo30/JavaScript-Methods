@@ -52,8 +52,19 @@ Array.prototype.mySome = function(callbackFn) {
 };
 
 // REDUCE //
-Array.prototype.myReduce = function() {
-
+Array.prototype.myReduce = function(callbackFn) {
+    let reduced = 0;
+    for (let i = 0; i < this.length; i++) {
+        if (this[i] === undefined | this [i] === null) continue;
+        if (i === 0) {
+            // Copy and continue on first go so that any multiplication reductions 
+            // won't get clobbered by stating with a 0
+            reduced = this[i]; 
+            continue;
+        }
+        reduced = callbackFn(reduced, this[i], i, this) // Uses 4 params
+    }
+    return reduced;
 };
 
 // INCLUDES //
