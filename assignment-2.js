@@ -86,10 +86,24 @@ Array.prototype.myIncludes = function(searchElement, fromIndex = 0) {
 };
 
 // INDEXOF //
-Array.prototype.myIndexOf = function() {
-
+Array.prototype.myIndexOf = function(searchElement, fromIndex = 0) {
+    let index = -1; // Make an int which saves first location of element
+    // Set to -1 first so that upon no find, -1 will be returned
+    if (fromIndex < 0) {
+        // For searching from the back of the array
+        // So -1 means searching just the last element
+        // -2 ... the last 2 elements ... so on
+        fromIndex = this.length + fromIndex; 
+    }
+    for (let i = fromIndex; i < this.length; i++) {
+        if (this[i] === searchElement) {
+            index = i; // Save the index
+            break; // Break so that no later elements can overwrite this index
+            // Only the first instance is what is needed anyways
+        }
+    }
+    return index;
 };
-
 // PUSH //
 Array.prototype.myPush = function(...args) {  // Use rest parameter to accept any number of input arguments
     let args_index = 0;  // Index of new element
