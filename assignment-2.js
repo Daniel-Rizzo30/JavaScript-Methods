@@ -35,8 +35,20 @@ Array.prototype.myMap = function(callbackFn) {
 };
 
 // SOME //
-Array.prototype.mySome = function() {
-
+Array.prototype.mySome = function(callbackFn) {
+    let any_flag = 0;
+    for (let i = 0; i < this.length; i++) {
+        if (callbackFn(this[i], i, this)) {
+            any_flag = 1;
+            break;
+        }
+    }
+    if (any_flag) {
+        return true;
+    }
+    else {
+        return false;
+    }
 };
 
 // REDUCE //
