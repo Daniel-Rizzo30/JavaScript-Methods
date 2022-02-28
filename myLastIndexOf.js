@@ -44,6 +44,15 @@ console.log("LastIndexOf (2 parameters): element, fromIndex");
 console.log(myArray.lastIndexOf(1,3)); // Parameter: 1,3 Returns 1
 console.log(myArray);
 
+// Test with 2 parameters: element, fromIndex
+console.log("myLastIndexOf (2 parameters): element, fromIndex");
+console.log(myArray.myLastIndexOf(1,12)); // Parameter: 1,12 Returns 1
+console.log(myArray);
+
+console.log("LastIndexOf (2 parameters): element, fromIndex");
+console.log(myArray.lastIndexOf(1,12)); // Parameter: 12 Returns 1
+console.log(myArray);
+
 // Test with 2 parameters again: element, fromIndex
 console.log("myLastIndexOf (2 parameters): element, fromIndex");
 console.log(myArray.myLastIndexOf("cat",4)); // Parameter: "cat",4 Returns -1
