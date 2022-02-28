@@ -117,8 +117,23 @@ Array.prototype.myPush = function(...args) {  // Use rest parameter to accept an
 };
 
 // LASTINDEXOF //
-Array.prototype.myLastIndexOf = function() {
-
+Array.prototype.myLastIndexOf = function(searchElement, fromIndex = this.length - 1) {
+    let index = -1; // Make an int which saves last location of element
+    // Set to -1 first so that upon no find, -1 will be returned
+    if (fromIndex < 0) {
+        // For searching from the back of the array
+        // So -1 means searching just the last element
+        // -2 ... the last 2 elements ... so on
+        fromIndex = this.length + fromIndex; 
+    }
+    for (let i = fromIndex; i >= 0; i--) { // Search backwards
+        if (this[i] === searchElement) {
+            index = i; // Save the index
+            break; // Break so that no earlier elements can overwrite this index
+            // Only the first instance is what is needed anyways
+        }
+    }
+    return index;
 };
 
 // KEYS //
