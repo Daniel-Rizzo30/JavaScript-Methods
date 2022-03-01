@@ -146,6 +146,14 @@ Object.myKeys = function(obj) {
 };
 
 // VALUES //
-Object.myValues = function() {
+Object.myValues = function(obj) { 
+    // Cannot just "return obj;" as this will output both attr and value
+    let value_list = []; // Set up empty array
+    for (var value in obj) { // for each value in the object
+        // Push to the list
+        // Need to use [] to access the actual values of the attribute
+        value_list.push(obj[value]);
+    } // Do not use "for (let attr of obj)" - this won't work
 
+    return value_list; // Return the full list
 };
