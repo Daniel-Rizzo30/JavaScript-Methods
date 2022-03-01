@@ -1,3 +1,9 @@
+// Daniel Rizzo
+// CSCI Web Development
+// Assignment 2 - JavaScript Methods
+// Professor Johnny Lai
+// March 15th, 2022
+
 // INCLUDES //
 Array.prototype.myIncludes = function(searchElement, fromIndex = 0) {
     let includes_flag = false; // Set flag for searching

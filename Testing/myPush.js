@@ -1,3 +1,9 @@
+// Daniel Rizzo
+// CSCI Web Development
+// Assignment 2 - JavaScript Methods
+// Professor Johnny Lai
+// March 15th, 2022
+
 // PUSH //
 Array.prototype.myPush = function(...args) {  // Use rest parameter to accept any number of input arguments
     let args_index = 0;  // Index of new element

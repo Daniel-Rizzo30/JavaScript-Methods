@@ -1,3 +1,9 @@
+// Daniel Rizzo
+// CSCI Web Development
+// Assignment 2 - JavaScript Methods
+// Professor Johnny Lai
+// March 15th, 2022
+
 // FOR EACH //
 Array.prototype.myEach = function (callbackFn) {
     for (let i = 0; i < this.length; i++) {   // "this" keyword refers to the array being called.

@@ -1,3 +1,9 @@
+// Daniel Rizzo
+// CSCI Web Development
+// Assignment 2 - JavaScript Methods
+// Professor Johnny Lai
+// March 15th, 2022
+
 // REDUCE //
 Array.prototype.myReduce = function(callbackFn) {
     let reduced = 0;
