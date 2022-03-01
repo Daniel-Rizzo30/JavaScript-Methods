@@ -1,3 +1,9 @@
+// Daniel Rizzo
+// CSCI Web Development
+// Assignment 2 - JavaScript Methods
+// Professor Johnny Lai
+// March 15th, 2022
+
 // INDEXOF //
 Array.prototype.myIndexOf = function(searchElement, fromIndex = 0) {
     let index = -1; // Make an int which saves first location of element

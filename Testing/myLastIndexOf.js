@@ -1,3 +1,9 @@
+// Daniel Rizzo
+// CSCI Web Development
+// Assignment 2 - JavaScript Methods
+// Professor Johnny Lai
+// March 15th, 2022
+
 // LASTINDEXOF //
 Array.prototype.myLastIndexOf = function(searchElement, fromIndex = this.length - 1) {
     let index = -1; // Make an int which saves last location of element

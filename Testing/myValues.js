@@ -1,3 +1,9 @@
+// Daniel Rizzo
+// CSCI Web Development
+// Assignment 2 - JavaScript Methods
+// Professor Johnny Lai
+// March 15th, 2022
+
 // VALUES //
 Object.myValues = function(obj) { 
     // Cannot just "return obj;" as this will output both attr and value

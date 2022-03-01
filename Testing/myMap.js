@@ -1,3 +1,9 @@
+// Daniel Rizzo
+// CSCI Web Development
+// Assignment 2 - JavaScript Methods
+// Professor Johnny Lai
+// March 15th, 2022
+
 // MAP //
 Array.prototype.myMap = function(callbackFn) {
     // Cannot use "let new_this = this" as this refers to the same address
