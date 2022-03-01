@@ -137,8 +137,12 @@ Array.prototype.myLastIndexOf = function(searchElement, fromIndex = this.length 
 };
 
 // KEYS //
-Object.myKeys = function() {
-
+Object.myKeys = function(obj) {
+    let attr_list = []; // Set up empty array
+    for (var attr in obj) { // for each attribute in the object
+        attr_list.push(attr); // Push to the list
+    } // Do not use "for (let attr of obj)" - this won't work
+    return attr_list; // Return the full list
 };
 
 // VALUES //
