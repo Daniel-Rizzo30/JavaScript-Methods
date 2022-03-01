@@ -1,9 +1,9 @@
 // KEYS //
 Object.myKeys = function(obj) {
     let attr_list = []; // Set up empty array
-    for (let attr of obj) { // for each attribute in the object ---- Doesn't work !!!!!!!!
+    for (var attr in obj) { // for each attribute in the object
         attr_list.push(attr); // Push to the list
-    }
+    } // Do not use "for (let attr of obj)" - this won't work
     return attr_list; // Return the full list
 };
 
@@ -27,6 +27,12 @@ const myObj = Object.create({}, {
 myObj.foo = 1; 
 // Should just list foo when called in keys function
 
+var buttons = {
+  foo: 'bar',
+  fiz: 'buz'
+};
+// Should list foo and fiz when called in keys function
+
 // Test with myArray
 console.log("myKeys (1 parameter): object");
 console.log(Object.myKeys(myArray)); // Parameter: myArray
@@ -44,3 +50,9 @@ console.log("myKeys (1 parameter): object");
 console.log(Object.myKeys(myObj)); // Parameter: myObj
 console.log("keys (1 parameter): object");
 console.log(Object.keys(myObj)); // Parameter: myObj
+
+// Test with buttons
+console.log("myKeys (1 parameter): object");
+console.log(Object.myKeys(buttons)); // Parameter: myObj
+console.log("keys (1 parameter): object");
+console.log(Object.keys(buttons)); // Parameter: myObj
